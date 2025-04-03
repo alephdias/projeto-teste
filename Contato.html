@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contato</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+            /* Reset básico */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                font-family: Arial, sans-serif;
+            }
+    
+            /* Estilo da barra de navegação */
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #333;
+                padding: 10px 20px;
+            }
+    
+            .logo {
+                color: #fff;
+                font-size: 24px;
+                font-weight: bold;
+            }
+    
+            .nav-links {
+                list-style: none;
+                display: flex;
+            }
+    
+            .nav-links li {
+                margin-left: 15px;
+            }
+    
+            .nav-links a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 16px;
+                transition: color 0.3s ease;
+            }
+    
+            .nav-links a:hover {
+                color: #ff6347;
+            }
+    
+            /* Estilo do menu mobile */
+            .menu-toggle {
+                display: none;
+                flex-direction: column;
+                cursor: pointer;
+            }
+    
+            .menu-toggle .bar {
+                width: 25px;
+                height: 3px;
+                background-color: #fff;
+                margin: 4px 0;
+                transition: all 0.3s ease;
+            }
+    
+            /* Responsividade */
+            @media (max-width: 768px) {
+                .nav-links {
+                    position: absolute;
+                    right: 0;
+                    top: 60px;
+                    background-color: #333;
+                    flex-direction: column;
+                    width: 100%;
+                    text-align: center;
+                    display: none;
+                }
+    
+                .nav-links li {
+                    margin: 10px 0;
+                }
+    
+                .nav-links.active {
+                    display: flex;
+                }
+    
+                .menu-toggle {
+                    display: flex;
+                }
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Meu Site</div>
+            <ul class="nav-links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="index.html">INDEX</a></li>
+                <li><a href="disciplinas.html">DISCIPLINAS MINISTRADAS</a></li>
+                <li><a href="musicas.html">MÚSICAS</a></li>
+                <li><a href="videos.html">VÍDEOS</a></li>
+                <li><a href="Contato.html">ENTRE EM CONTATO</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Formulário de Contato</h1>
+        <form action="processa_contato.php" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome <span class="required">*</span></label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" name="telefone">
+            </div>
+            
+            <div class="form-group">
+                <label for="assunto">Assunto <span class="required">*</span></label>
+                <input type="text" id="assunto" name="assunto" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="mensagem">Mensagem <span class="required">*</span></label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+            </div>
+            
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </main>
+</body>
+</html>

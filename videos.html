@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt+br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo da barra de navegação */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 15px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff6347;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        .video-category {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .video-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .video-info {
+            padding: 15px;
+        }
+        .video-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        .video-channel {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .video-desc {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .intro {
+            background-color: #e8f4fc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 1em;
+            line-height: 1.7;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Meu Site</div>
+            <ul class="nav-links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="index.html">INDEX</a></li>
+                <li><a href="disciplinas.html">DISCIPLINAS MINISTRADAS</a></li>
+                <li><a href="musicas.html">MÚSICAS</a></li>
+                <li><a href="videos.html">VÍDEOS</a></li>
+                <li><a href="Contato.html">ENTRE EM CONTATO</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <h1>Recursos de Programação em Vídeo</h1>
+
+    <div class="video-category">
+        <h2>Fundamentos de Programação</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/S9uPNppGsGo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Programação para Iniciantes - Primeiros Passos</div>
+                    <div class="video-channel">Curso em Vídeo</div>
+                    <div class="video-desc">Introdução completa à programação para quem está começando do zero.</div>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/8mei6uVttho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Lógica de Programação Essencial</div>
+                    <div class="video-channel">Danki Code</div>
+                    <div class="video-desc">Aprenda os fundamentos da lógica de programação antes de escolher uma linguagem.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-category">
+        <h2>Desenvolvimento Web</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Ejkb_YpuHWs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">HTML e CSS para Iniciantes</div>
+                    <div class="video-channel">Rafaella Ballerini</div>
+                    <div class="video-desc">Curso completo de HTML e CSS do absoluto zero.</div>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/1Rs2ND1ryYc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">JavaScript Moderno do Básico ao Avançado</div>
+                    <div class="video-channel">Matheus Battisti</div>
+                    <div class="video-desc">Guia completo de JavaScript com projetos práticos.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-category">
+        <h2>Ciência de Dados</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Python para Ciência de Dados</div>
+                    <div class="video-channel">freeCodeCamp</div>
+                    <div class="video-desc">Curso completo de Python focado em análise de dados.</div>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/7L3UULBzPqg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Introdução ao Pandas</div>
+                    <div class="video-channel">Data Science Academy</div>
+                    <div class="video-desc">Tutorial completo da biblioteca Pandas para manipulação de dados.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-category">
+        <h2>Carreira em Tecnologia</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/gyMwXuJrbJQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Roadmap Completo para Dev em 2024</div>
+                    <div class="video-channel">Filipe Deschamps</div>
+                    <div class="video-desc">O que aprender para se tornar desenvolvedor em 2024.</div>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/6HwwODumrQ0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Como Conseguir o Primeiro Emprego em TI</div>
+                    <div class="video-channel">Alura</div>
+                    <div class="video-desc">Dicas práticas para ingressar na área de tecnologia.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

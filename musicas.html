@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt+br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+           
+    
+            /* Estilo da barra de navegação */
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #333;
+                padding: 10px 20px;
+            }
+    
+            .logo {
+                color: #fff;
+                font-size: 24px;
+                font-weight: bold;
+            }
+    
+            .nav-links {
+                list-style: none;
+                display: flex;
+            }
+    
+            .nav-links li {
+                margin-left: 15px;
+            }
+    
+            .nav-links a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 16px;
+                transition: color 0.3s ease;
+            }
+    
+            .nav-links a:hover {
+                color: #ff6347;
+            }
+            
+        
+            h1 {
+                color: #2c3e50;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            h2 {
+                color: #3498db;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 5px;
+                margin-top: 30px;
+            }
+            .playlist {
+                background-color: white;
+                border-radius: 8px;
+                padding: 20px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .music {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                border-bottom: 1px solid #eee;
+            }
+            .music:last-child {
+                border-bottom: none;
+            }
+            .music-info {
+                flex: 1;
+            }
+            .music-title {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            .music-artist {
+                color: #7f8c8d;
+                font-size: 0.9em;
+            }
+            .listen-btn {
+                background-color: #3498db;
+                color: white;
+                border: none;
+                padding: 8px 15px;
+                border-radius: 4px;
+                cursor: pointer;
+                text-decoration: none;
+                font-size: 0.9em;
+            }
+            .listen-btn:hover {
+                background-color: #2980b9;
+            }
+            .description {
+                background-color: #e8f4fc;
+                padding: 15px;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                font-size: 0.95em;
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Meu Site</div>
+            <ul class="nav-links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="index.html">INDEX</a></li>
+                <li><a href="disciplinas.html">DISCIPLINAS MINISTRADAS</a></li>
+                <li><a href="musicas.html">MÚSICAS</a></li>
+                <li><a href="videos.html">VÍDEOS</a></li>
+                <li><a href="Contato.html">ENTRE EM CONTATO</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <h1>Músicas para Estudar e Concentrar</h1>
+    
+    <div class="description">
+        <p>Selecionei algumas playlists e músicas ideais para estudo, concentração e foco. Estas seleções incluem música clássica, sons ambientais e lo-fi hip hop, conhecidos por melhorar a produtividade durante os estudos.</p>
+    </div>
+
+    <div class="playlist">
+        <h2>Música Clássica para Concentração</h2>
+        
+        <div class="music">
+            <div class="music-info">
+                <div class="music-title">Estudo Op. 10 No. 3</div>
+                <div class="music-artist">Frédéric Chopin</div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=9E6b3swbnWg" target="_blank" class="listen-btn">Ouvir</a>
+        </div>
+        
+        <div class="music">
+            <div class="music-info">
+                <div class="music-title">Sonata ao Luar - 1º Movimento</div>
+                <div class="music-artist">Ludwig van Beethoven</div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=4Tr0otuiQuU" target="_blank" class="listen-btn">Ouvir</a>
+        </div>
+        
+        <div class="music">
+            <div class="music-info">
+                <div class="music-title">As Quatro Estações - Primavera</div>
+                <div class="music-artist">Antonio Vivaldi</div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=GRxofEmo3HA" target="_blank" class="listen-btn">Ouvir</a>
+        </div>
+    </div>
+
+    <div class="playlist">
+        <h2>Lo-Fi Hip Hop Relaxante</h2>
+        
+        <div class="music">
+            <div class="music-info">
+                <div class="music-title">lofi hip hop radio - beats to relax/study to</div>
+                <div class="music-artist">ChilledCow</div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=5qap5aO4i9A" target="_blank" class="listen-btn">Ouvir</a>
+        </div>
+        
+        <div class="music">
+            <div class="music-info">
+                <div class="music-title">Study Session • [lofi hip hop/chill beats]</div>
+                <div class="music-artist">Chillhop Music</div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=0xs-oaSZdqE" target="_blank" class="listen-btn">Ouvir</a>
+        </div>
+    </div>
+
+    <div class="playlist">
+        <h2>Sons da Natureza para Foco</h2>
+        
+        <div class="music">
+            <div class="music-info">
+                <div class="music-title">Chuva e Trovão para Dormir</div>
+                <div class="music-artist">Sons Relaxantes</div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=WsiRSWthV1k" target="_blank" class="listen-btn">Ouvir</a>
+        </div>
+        
+        <div class="music">
+            <div class="music-info">
+                <div class="music-title">Ondas do Oceano</div>
+                <div class="music-artist">Nature Sounds</div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=rDZmH1xpeL0" target="_blank" class="listen-btn">Ouvir</a>
+        </div>
+        
+        <div class="music">
+            <div class="music-info">
+                <div class="music-title">Floresta com Pássaros</div>
+                <div class="music-artist">Ambient Worlds</div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=H9tEvfIsDyo" target="_blank" class="listen-btn">Ouvir</a>
+        </div>
+    </div>
+
+    <div class="playlist">
+        <h2>Playlists Completas para Estudo</h2>
+        
+        <div class="music">
+            <div class="music-info">
+                <div class="music-title">Deep Focus - Playlist Spotify</div>
+                <div class="music-artist">Spotify</div>
+            </div>
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DWZeKCadgRdKQ" target="_blank" class="listen-btn">Ouvir</a>
+        </div>
+        
+        <div class="music">
+            <div class="music-info">
+                <div class="music-title">Peaceful Piano</div>
+                <div class="music-artist">Spotify</div>
+            </div>
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DX4sWSpwq3LiO" target="_blank" class="listen-btn">Ouvir</a>
+        </div>
+    </div>
+</body>
+</html>
